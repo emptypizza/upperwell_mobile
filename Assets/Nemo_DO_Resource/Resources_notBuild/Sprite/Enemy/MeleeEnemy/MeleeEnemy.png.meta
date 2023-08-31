@@ -1,0 +1,1779 @@
+fileFormatVersion: 2
+guid: cdc482b946fedd24e9727d031b3abde3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: atk_67
+  - first:
+      213: 21300002
+    second: atk_292
+  - first:
+      213: 21300004
+    second: atk_run_67
+  - first:
+      213: 21300006
+    second: atk_run_292
+  - first:
+      213: 21300008
+    second: atk_45
+  - first:
+      213: 21300010
+    second: atk_315
+  - first:
+      213: 21300012
+    second: atk_run_45
+  - first:
+      213: 21300014
+    second: atk_112
+  - first:
+      213: 21300016
+    second: atk_202
+  - first:
+      213: 21300018
+    second: atk_180
+  - first:
+      213: 21300020
+    second: atk_157
+  - first:
+      213: 21300022
+    second: atk_247
+  - first:
+      213: 21300024
+    second: atk_run_315
+  - first:
+      213: 21300026
+    second: atk_run_180
+  - first:
+      213: 21300028
+    second: atk_run_157
+  - first:
+      213: 21300030
+    second: atk_run_202
+  - first:
+      213: 21300032
+    second: atk_run_112
+  - first:
+      213: 21300034
+    second: atk_run_247
+  - first:
+      213: 21300036
+    second: atk_run_337
+  - first:
+      213: 21300038
+    second: atk_90
+  - first:
+      213: 21300040
+    second: atk_run_270
+  - first:
+      213: 21300042
+    second: atk_22
+  - first:
+      213: 21300044
+    second: atk_run_22
+  - first:
+      213: 21300046
+    second: atk_run_90
+  - first:
+      213: 21300048
+    second: atk_270
+  - first:
+      213: 21300050
+    second: atk_337
+  - first:
+      213: 21300052
+    second: atk_0
+  - first:
+      213: 21300054
+    second: atk_run_135
+  - first:
+      213: 21300056
+    second: atk_run_225
+  - first:
+      213: 21300058
+    second: atk_run_0
+  - first:
+      213: 21300060
+    second: atk_135
+  - first:
+      213: 21300062
+    second: atk_225
+  - first:
+      213: 21300064
+    second: Def_run_22
+  - first:
+      213: 21300066
+    second: Def_run_157
+  - first:
+      213: 21300068
+    second: Def_22
+  - first:
+      213: 21300070
+    second: Def_202
+  - first:
+      213: 21300072
+    second: Def_45
+  - first:
+      213: 21300074
+    second: Def_run_45
+  - first:
+      213: 21300076
+    second: Def_run_202
+  - first:
+      213: 21300078
+    second: Def_157
+  - first:
+      213: 21300080
+    second: Def_run_315
+  - first:
+      213: 21300082
+    second: Def_run_337
+  - first:
+      213: 21300084
+    second: Def_337
+  - first:
+      213: 21300086
+    second: Def_315
+  - first:
+      213: 21300088
+    second: Def_225
+  - first:
+      213: 21300090
+    second: Def_run_225
+  - first:
+      213: 21300092
+    second: Def_135
+  - first:
+      213: 21300094
+    second: Def_run_135
+  - first:
+      213: 21300096
+    second: Def_112
+  - first:
+      213: 21300098
+    second: Def_247
+  - first:
+      213: 21300100
+    second: Def_run_112
+  - first:
+      213: 21300102
+    second: Def_run_247
+  - first:
+      213: 21300104
+    second: Def_run_67
+  - first:
+      213: 21300106
+    second: Def_run_292
+  - first:
+      213: 21300108
+    second: Def_292
+  - first:
+      213: 21300110
+    second: Def_67
+  - first:
+      213: 21300112
+    second: Def_0
+  - first:
+      213: 21300114
+    second: Def_run_0
+  - first:
+      213: 21300116
+    second: Def_run_180
+  - first:
+      213: 21300118
+    second: Def_180
+  - first:
+      213: 21300120
+    second: Def_90
+  - first:
+      213: 21300122
+    second: Def_run_90
+  - first:
+      213: 21300124
+    second: Def_270
+  - first:
+      213: 21300126
+    second: Def_run_270
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Def_run_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 82
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_157
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 82
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 83
+        width: 82
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_202
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1
+        width: 82
+        height: 78
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 165
+        width: 82
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.5063291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_45
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1
+        width: 82
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.5063291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_202
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 246
+        width: 82
+        height: 78
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_157
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1
+        width: 82
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_315
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 81
+        width: 82
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.5063291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_337
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 326
+        width: 82
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_337
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1
+        width: 82
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_315
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 81
+        width: 82
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.5063291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_225
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 408
+        width: 81
+        height: 77
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.5194805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_225
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 81
+        width: 81
+        height: 77
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.5194805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_135
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1
+        width: 81
+        height: 77
+      alignment: 9
+      pivot: {x: 0.5185185, y: 0.5194805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_135
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 162
+        width: 81
+        height: 77
+      alignment: 9
+      pivot: {x: 0.5185185, y: 0.5194805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_112
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 408
+        width: 79
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5316456, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_247
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 82
+        width: 79
+        height: 76
+      alignment: 9
+      pivot: {x: 0.46835443, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_112
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 83
+        width: 79
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5316456, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_247
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1
+        width: 79
+        height: 76
+      alignment: 9
+      pivot: {x: 0.46835443, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_67
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 80
+        width: 78
+        height: 78
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_292
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 162
+        width: 78
+        height: 78
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_292
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 160
+        width: 78
+        height: 78
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_67
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1
+        width: 78
+        height: 78
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.51282054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_0
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 160
+        width: 72
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 241
+        width: 72
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_180
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 242
+        width: 72
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_180
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 240
+        width: 72
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_292
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 160
+        width: 74
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47297296, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_67
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 79
+        width: 74
+        height: 71
+      alignment: 9
+      pivot: {x: 0.527027, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_292
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1
+        width: 74
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47297296, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_67
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 237
+        width: 74
+        height: 71
+      alignment: 9
+      pivot: {x: 0.527027, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_315
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 160
+        width: 71
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5070422, y: 0.49315068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_90
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 318
+        width: 72
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5694444, y: 0.5479452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_45
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 319
+        width: 71
+        height: 73
+      alignment: 9
+      pivot: {x: 0.52112675, y: 0.49315068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_90
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 317
+        width: 72
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5694444, y: 0.5479452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_45
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 81
+        width: 71
+        height: 73
+      alignment: 9
+      pivot: {x: 0.52112675, y: 0.49315068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_247
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1
+        width: 73
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47945204, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_157
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 310
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_112
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 161
+        width: 73
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5205479, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_180
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 237
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.53424656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_270
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 235
+        width: 72
+        height: 73
+      alignment: 9
+      pivot: {x: 0.43055555, y: 0.5479452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_202
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 394
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.4923077, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_202
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 392
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.4923077, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_180
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 81
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.53424656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_247
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1
+        width: 73
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47945204, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_315
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 385
+        width: 71
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5070422, y: 0.49315068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Def_run_270
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 312
+        width: 72
+        height: 73
+      alignment: 9
+      pivot: {x: 0.43055555, y: 0.5479452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_112
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 237
+        width: 73
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5205479, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_157
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 156
+        width: 65
+        height: 73
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_270
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 74
+        width: 72
+        height: 71
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_90
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 387
+        width: 72
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_337
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 312
+        width: 65
+        height: 72
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.4722222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_90
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 156
+        width: 72
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_22
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 231
+        width: 65
+        height: 72
+      alignment: 9
+      pivot: {x: 0.4923077, y: 0.4722222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_337
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 74
+        width: 65
+        height: 72
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.4722222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_270
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 387
+        width: 72
+        height: 71
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.49295774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_22
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 156
+        width: 65
+        height: 72
+      alignment: 9
+      pivot: {x: 0.4923077, y: 0.4722222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_0
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 305
+        width: 65
+        height: 71
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.45070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_135
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 74
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.52112675, y: 0.5070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_225
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 148
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47887325, y: 0.5070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_run_0
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 310
+        width: 65
+        height: 71
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.45070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_135
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 229
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.52112675, y: 0.5070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk_225
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 147
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.47887325, y: 0.5070422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Def_0: 21300112
+      Def_112: 21300096
+      Def_135: 21300092
+      Def_157: 21300078
+      Def_180: 21300118
+      Def_202: 21300070
+      Def_22: 21300068
+      Def_225: 21300088
+      Def_247: 21300098
+      Def_270: 21300124
+      Def_292: 21300108
+      Def_315: 21300086
+      Def_337: 21300084
+      Def_45: 21300072
+      Def_67: 21300110
+      Def_90: 21300120
+      Def_run_0: 21300114
+      Def_run_112: 21300100
+      Def_run_135: 21300094
+      Def_run_157: 21300066
+      Def_run_180: 21300116
+      Def_run_202: 21300076
+      Def_run_22: 21300064
+      Def_run_225: 21300090
+      Def_run_247: 21300102
+      Def_run_270: 21300126
+      Def_run_292: 21300106
+      Def_run_315: 21300080
+      Def_run_337: 21300082
+      Def_run_45: 21300074
+      Def_run_67: 21300104
+      Def_run_90: 21300122
+      atk_0: 21300052
+      atk_112: 21300014
+      atk_135: 21300060
+      atk_157: 21300020
+      atk_180: 21300018
+      atk_202: 21300016
+      atk_22: 21300042
+      atk_225: 21300062
+      atk_247: 21300022
+      atk_270: 21300048
+      atk_292: 21300002
+      atk_315: 21300010
+      atk_337: 21300050
+      atk_45: 21300008
+      atk_67: 21300000
+      atk_90: 21300038
+      atk_run_0: 21300058
+      atk_run_112: 21300032
+      atk_run_135: 21300054
+      atk_run_157: 21300028
+      atk_run_180: 21300026
+      atk_run_202: 21300030
+      atk_run_22: 21300044
+      atk_run_225: 21300056
+      atk_run_247: 21300034
+      atk_run_270: 21300040
+      atk_run_292: 21300006
+      atk_run_315: 21300024
+      atk_run_337: 21300036
+      atk_run_45: 21300012
+      atk_run_67: 21300004
+      atk_run_90: 21300046
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
