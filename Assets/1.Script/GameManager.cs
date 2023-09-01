@@ -105,6 +105,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.me.PlayBackgroundMusic(nLevel);
         Time.timeScale = 1f;
         nGameScore_current = 0;
         nGameScore_Best = 0;

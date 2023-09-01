@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 27596515
-  m_SortingLayer: 1
+  m_SortingLayerID: -1424530011
+  m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1617056688, guid: 02920f850997949249548f525954307c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b69161b66692b4b4697d695b956583d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.98, y: 0.32}
+    oldSize: {x: 0.98, y: 1.78}
     newSize: {x: 1.92, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
