@@ -51,7 +51,7 @@ public class EnemyPC : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.current.GS == GameState.Play)
+        if (GameManager.Instance.GS == GameState.Play)
         {
             UpdateAIState();
         }
@@ -59,7 +59,7 @@ public class EnemyPC : MonoBehaviour
 
     private void InitializeComponents()
     {
-        firePosition = transform.Find("gunner/FirePosition");
+        //firePosition = transform.Find("gunner/FirePosition");
     }
 
     private void InitializeHealth()

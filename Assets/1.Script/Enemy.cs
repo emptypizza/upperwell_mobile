@@ -103,6 +103,19 @@ public class Enemy : MonoBehaviour
 
     public void Dead()
     {
+
+
+        switch (enemykind)
+        {
+            case EnemyKind.foot:
+                SoundManager.Instance.E1Dead();
+
+                break;
+            case EnemyKind.fly:
+
+                break;
+         
+        }
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         Destroy(this.gameObject, 0.45f);
     }
@@ -111,8 +124,8 @@ public class Enemy : MonoBehaviour
     {
         if (collision.transform.tag == "PMissile")
         {
-            Debug.LogWarning("(Enemy) death sound.GameManager.current.AddScore();");
-            GameManager.current.AddScore();
+            Debug.LogWarning("(Enemy) death sound.GameManager.Instance.AddScore();");
+            GameManager.Instance.AddScore();
             Dead();
         }
     }
@@ -172,8 +185,8 @@ public float fCheckdisfordic;
         if (collision.transform.tag == "PMissile")
         {
 
-            Debug.LogWarning("(적) 죽음음.GameManager.current.AddScore();");
-            GameManager.current.AddScore();
+            Debug.LogWarning("(적) 죽음음.GameManager.Instance.AddScore();");
+            GameManager.Instance.AddScore();
             Dead();
             
         }  

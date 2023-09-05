@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -49,6 +50,8 @@ public class ballrumble : MonoBehaviour
 
     void Start()
     {
+        //GameManager.Instance.ballrumble_pc = this;
+        joystick = GameObject.FindObjectOfType<DynamicJoystick>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Dash_fDeltatime = 0;
@@ -73,7 +76,8 @@ public class ballrumble : MonoBehaviour
     public void Dead()
     {
         bIsDead = true;
-        SceneManager.LoadScene(1);// 게임 오버 처리 구현 할것
+        GameManager.nLevel = 1;
+        SceneManager.LoadScene(1);// Level1 돌아간. 게임 오버 처리 구현 할것
     }
 
     public void OnShot()
@@ -81,7 +85,7 @@ public class ballrumble : MonoBehaviour
         if (bJumpOK)
         {
 
-            SoundManager.me.Fire();
+            SoundManager.Instance.Fire();
             Vector2 dic_aim = Aim.transform.position - this.transform.position;
            // dic_aim = -dic_aim;
          
@@ -119,8 +123,10 @@ public class ballrumble : MonoBehaviour
   
     void FixedUpdate()// Upate()
     {
-       //nHP = list_ComboStack.Count;
-       // HandleComboDisplay();
+
+ 
+        //nHP = list_ComboStack.Count;
+        // HandleComboDisplay();
         if (bCharInterpolationOn)
             Rotationinterpolation();
 
@@ -128,13 +134,13 @@ public class ballrumble : MonoBehaviour
         Textjumpdelay.text = Dash_fDeltatime.ToString("F2");
         TextnHP.text = this.nHP.ToString();
 
-       
 
+   
 
         if (nHP <= 0)
         {
             bIsDead = true;
-            SoundManager.me.Playerdie();
+            SoundManager.Instance.Playerdie();
         }
            
      
@@ -142,7 +148,21 @@ public class ballrumble : MonoBehaviour
         if (bIsDead)
             Dead();
 
+        // 키보드 입력 처리
+        moveInput_keyboard = Input.GetAxisRaw("Horizontal");
+        Vector2 dir = new Vector2(moveInput_keyboard, 0);
+        transform.position += (Vector3)dir * fPCSpeed * Time.deltaTime;
+        rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
+        if (moveInput_keyboard != 0)
+            transform.Find("DIO").transform.Rotate(0, 0, -3 * moveInput_keyboard);
 
+        // 조이스틱 입력 처리
+        float horizontalInput = joystick.Horizontal;
+        if (horizontalInput != 0)
+            transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
+
+
+        /*
         moveInput_keyboard = Input.GetAxisRaw("Horizontal");
         Vector2 dir = new Vector2(moveInput_keyboard, 0);
 
@@ -167,9 +187,9 @@ public class ballrumble : MonoBehaviour
                 transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
             
         }
+        */
 
 
-      
 
 
         if (bJumpOK == false)
@@ -268,7 +288,7 @@ public class ballrumble : MonoBehaviour
             if (collision.gameObject.CompareTag("wall_good"))
             {
                 wall.n_hp -= 1;
-                GameManager.current.AddScore();
+                GameManager.Instance.AddScore();
 
                 // anim.SetTrigger("ani_dash");
 
@@ -294,25 +314,39 @@ public class ballrumble : MonoBehaviour
         }
     }
 
+
+    [SerializeField] float BlueBoomValue = 8.7f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Wall wall = collision.gameObject.GetComponent<Wall>();
 
         if (collision.gameObject.tag == "Finish")
         {
-            GameManager.current.GS = GameState.Clear;
-            //  GameManager.current.Clear();
+            GameManager.Instance.GS = GameState.Clear;
+            
+
+            SoundManager.Instance.Goalin();//  GameManager.Instance.Clear();
         }
 
-        if (collision.gameObject.tag == "wall_good")
+        if (collision.gameObject.tag == "wall_good")        //    HandleTrigger(collision);
         {
-            //rb.AddRelativeForce(Vector2.up * 10f);
-            rb.AddForce(Vector2.up * 1.3f, ForceMode2D.Impulse);
+            Quaternion rotation = Quaternion.Euler(260, 0, 0);
+            // "BlueBoom" 이펙트 프리팹을 Instantiate합니다.
+            GameObject blueBoom = Instantiate(Resources.Load("BlueBoom") as GameObject, collision.transform.position, rotation);
 
+            // 여기서는 이펙트가 자동으로 사라지지 않는다면 몇 초 후에 파괴하는 코드를 추가할 수 있습니다.
+            // 예: Destroy(blueBoom, 3.0f); // 3초 후에 파괴
+
+            rb.AddForce(Vector2.up * BlueBoomValue, ForceMode2D.Impulse);
+            SoundManager.Instance.WarpUp();
             wall.n_hp -= 1;
+
+            //rb.AddRelativeForce(Vector2.up * 10f);
+     
         }
        
-        //    HandleTrigger(collision);
+
+
         
     }
 
@@ -329,6 +363,11 @@ public class ballrumble : MonoBehaviour
                 comboGauge = Mathf.Clamp(comboGauge, 0f, 1f);
                 //  Debug.LogWarning("아wall_goodwall_goodwall_good ");
                 GameObject combo = Instantiate(Resources.Load("combo") as GameObject);
+
+                if (combo == null)
+                    Debug.LogError("이상하다다다다다다");
+
+
                 combo.transform.SetParent(this.transform, false);
                 list_ComboStack.Add(combo);
 

@@ -1,17 +1,22 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
-    public static SoundManager me;
-
-   
+    public enum SoundType
+    {
+        Click,
+        GetBullet,
+        Fire,
+        // ... other sound types
+    }
     public AudioSource speaker_A;
     public AudioSource speaker_B;
     public AudioSource speaker_C;
     public AudioSource speaker_D;
-    public AudioSource speaker_E;public AudioSource speaker_BGM;
+    public AudioSource speaker_E;
+    public AudioSource speaker_BGM;
+
 
     // ... (기존의 AudioSource 및 AudioClip 변수들)
 
@@ -19,10 +24,13 @@ public class SoundManager : MonoBehaviour
     public AudioClip clickSound;
     public AudioClip getBulletSound;
     public AudioClip EFireSound;
-    public AudioClip TH2BossFireSound;
-    public AudioClip TH2BossAtk1Sound;
-    public AudioClip TH2CubeDropSound;
-    public AudioClip TH2CubeDrop2Sound;
+    public AudioClip TH1BossFireSound;
+    public AudioClip TH1BossAtk1Sound;
+    public AudioClip TH1CubeDropSound;
+    public AudioClip TH1CubeDrop2Sound;
+
+
+
     public AudioClip damagedBoxSound;
     public AudioClip GoalinSound;
     public AudioClip WarpUpSound;
@@ -37,18 +45,67 @@ public class SoundManager : MonoBehaviour
     public AudioClip PlayerwalkSound;
     public AudioClip ShieldSound;
     public AudioClip startani;
-    public AudioClip[] BG_AmdientSound = new AudioClip[4];
+    public AudioClip[] BGMarray = new AudioClip[4];
+
+    public AudioClip E1Atksnd;
+    public AudioClip E1Deadsnd;
+    public AudioClip E2Atksnd;
+    public AudioClip E2Deadsnd;
+    public AudioClip E3Atksnd;
+    public AudioClip E3Deadsnd;
     //---   언에이블 일렉홀 . 전기 함정 무효화 
     public AudioClip UnenableElesound;
-    public AudioClip BGM; // 160319 경환 이거 써야 하는 변수인지
 
 
- 
-    void Awake()
+    [System.Serializable]
+    public class SoundAudioClip
     {
-        if (me == null)
+        public SoundType soundType;
+        public AudioClip audioClip;
+    }
+
+    public SoundAudioClip[] soundAudioClipArray;
+
+    private Dictionary<SoundType, AudioClip> soundAudioClips;
+    private AudioSource audioSource;
+
+    protected override void Awake()
+    {
+        base.Awake();  // Call the Singleton's Awake()
+
+
+        // Initialize soundAudioClipArray here if not doing so in the inspector
+        soundAudioClipArray = new SoundAudioClip[] {
+        // fill your clips here
+    };
+        
+        soundAudioClips = new Dictionary<SoundType, AudioClip>();
+        foreach (SoundAudioClip soundAudioClip in soundAudioClipArray)
         {
-            me = this;
+            soundAudioClips[soundAudioClip.soundType] = soundAudioClip.audioClip;
+        }
+        
+
+        if (soundAudioClipArray != null)
+        {
+            foreach (SoundAudioClip soundAudioClip in soundAudioClipArray)
+            {
+                if (soundAudioClip != null)
+                {
+                    soundAudioClips[soundAudioClip.soundType] = soundAudioClip.audioClip;
+                }
+            }
+        }
+
+        audioSource = GetComponent<AudioSource>();
+       
+    }
+
+    /*  void Awake()
+    {
+      if (this == null)
+        {
+            this.Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -56,6 +113,18 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
+    void Start()
+    {
+       // if(GameManager.nLevel >= 0)
+       // PlayBackgroundMusic(GameManager.nLevel);
+
+    }
+
+    public void E1Dead() => PlaySound(E1Deadsnd, speaker_A);
+    public void Click() => PlaySound(clickSound, speaker_A);
+    public void Getbullet() => PlaySound(getBulletSound, speaker_B);
+
 
     public void PlaySound(AudioClip clip, AudioSource source, float volume = 1.0f)
     {
@@ -64,22 +133,16 @@ public class SoundManager : MonoBehaviour
         source.Play();
     }
 
-    public void Click() => PlaySound(clickSound, speaker_A);
-    public void Getbullet() => PlaySound(getBulletSound, speaker_B);
-    // ... (기타 사운드 메서드)
- /*   public void Click()
-    {
-        speaker_A.clip = clickSound;
-        speaker_A.Play();
 
 
-    }
-    public void Getbullet()
+    public void PlaySound(SoundType soundType)
     {
-        speaker_B.clip = getBulletSound;
-        speaker_B.Play();
+        if (soundAudioClips.ContainsKey(soundType))
+        {
+            audioSource.PlayOneShot(soundAudioClips[soundType]);
+        }
     }
- */
+
     public void playTooltipsound()
     {
         speaker_C.clip = Tooltipsound;
@@ -177,43 +240,43 @@ public class SoundManager : MonoBehaviour
         speaker_C.clip = ShieldSound;
         speaker_C.Play();
     }
-    public void TH2Bossfire()
+    public void TH1Bossfire()
     {
-        speaker_D.clip = TH2BossFireSound;
+        speaker_D.clip = TH1BossFireSound;
         speaker_D.Play();
     }
 
-    public void TH2CubeDrop1()
+    public void TH1CubeDrop1()
     {
-        speaker_E.clip = TH2CubeDropSound;
+        speaker_E.clip = TH1CubeDropSound;
         speaker_E.Play();
     }
     public void BG_AmdientSound0()
     {
-        speaker_A.clip = BG_AmdientSound[0];
+        speaker_A.clip = BGMarray[0];
         speaker_A.Play();
     }
     public void BG_AmdientSound1()
     {
-        speaker_E.clip = BG_AmdientSound[1];
+        speaker_E.clip = BGMarray[1];
         speaker_E.volume = 0.2f;
         speaker_E.Play();
     }
     public void BG_AmdientSound2()
     {
-        speaker_B.clip = BG_AmdientSound[2];
+        speaker_B.clip = BGMarray[2];
         speaker_B.Play();
     }
     public void BG_AmdientSound3()
     {
-        speaker_A.clip = BG_AmdientSound[3];
+        speaker_A.clip = BGMarray[3];
         speaker_A.volume = 0.8f;
         speaker_A.Play();
     }
 
-    public void TH2CubeDrop2()
+    public void TH1CubeDrop2()
     {
-        speaker_D.clip = TH2CubeDrop2Sound;
+        speaker_D.clip = TH1CubeDrop2Sound;
         speaker_D.Play();
     }
 
@@ -222,14 +285,49 @@ public class SoundManager : MonoBehaviour
         AudioClip clipToPlay = null;
         switch (level)
         {
-            case 1: clipToPlay = BG_AmdientSound[0]; break;
-            case 2: clipToPlay = BG_AmdientSound[1]; break;
+            case 1: clipToPlay = BGMarray[0]; break;
+            case 2: clipToPlay = BGMarray[1]; break;
+            case 3: clipToPlay = BGMarray[2]; break;
+            case 4: clipToPlay = BGMarray[3]; break;
                 // ... (다른 레벨의 음악)
         }
 
         if (clipToPlay != null)
         {
+
             PlaySound(clipToPlay, speaker_BGM);  // 배경음악이 재생될 AudioSource 선택
         }
     }
 }
+
+
+
+/*
+
+public class SoundManager : MonoBehaviour
+{
+    public static SoundManager me;
+
+
+
+
+
+
+
+    // ... (기타 사운드 메서드)
+   public void Click()
+   {
+       speaker_A.clip = clickSound;
+       speaker_A.Play();
+
+
+   }
+   public void Getbullet()
+   {
+       speaker_B.clip = getBulletSound;
+       speaker_B.Play();
+   }
+
+
+}
+ */

@@ -35,7 +35,7 @@ public class BigPress : MonoBehaviour // : InitializeBase
     // Update is called once per frame
     void Update()
     {
-      //  if (GameManager.me.GS == GameState.Play)
+    //    if (GameManager.current.GS == GameState.Play)
         {
             if (dtime < fStartTime)
             {

@@ -37,20 +37,34 @@ public class MainMenu : MonoBehaviour
         buttons[1] = GameObject.Find("Button_credit").GetComponent<Button>();
         buttons[2] = GameObject.Find("Button_exit").GetComponent<Button>();
         */
+
+        Debug.LogWarning(GameManager.nLevel + "level이다다다다");
     }
 
 
 
 
 
-    public void executeGame()
+    public void newstartGame()
     {
-
+        GameManager.nLevel = 1;
         audioSource.PlayOneShot(btnpress1);
 
 
         SceneManager.LoadScene(1);
         nSelect = 1;
+
+
+
+    }
+    public void continueGame()
+    {
+
+        audioSource.PlayOneShot(btnpress1);
+
+
+        SceneManager.LoadScene(GameManager.nLevel);
+        nSelect = 2;
 
 
 
@@ -63,7 +77,7 @@ public class MainMenu : MonoBehaviour
         audioSource.PlayOneShot(buttonClickSound);
 
         Creditimg.gameObject.SetActive(true);
-        nSelect = 2;
+        nSelect = 3;
         
 
     }
@@ -75,7 +89,7 @@ public class MainMenu : MonoBehaviour
         audioSource.PlayOneShot(buttonClickSound);
 
         Creditimg.gameObject.SetActive(false);
-        nSelect = 3;
+        nSelect = 4;
 
     }
 
@@ -84,7 +98,7 @@ public class MainMenu : MonoBehaviour
 
         audioSource.PlayOneShot(btn);
 
-        nSelect = 4;
+        nSelect = 5;
         Application.Quit();
 
 
