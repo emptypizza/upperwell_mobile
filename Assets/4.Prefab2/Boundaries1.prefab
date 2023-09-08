@@ -171,8 +171,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667140456614647427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.31, y: -3.0999985, z: 0}
-  m_LocalScale: {x: 9.4, y: 5.9, z: 1}
+  m_LocalPosition: {x: 0, y: -3.55, z: 0}
+  m_LocalScale: {x: 4.9, y: 5.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4536741357312660337}
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667140456614647427}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb25c1ae64d0a4bb98d8d6f111ab1a17, type: 3}
   m_Name: 
@@ -328,7 +328,7 @@ Transform:
   - {fileID: 2614816412890861711}
   - {fileID: 1160701154855121790}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2848807255970198354
 GameObject:
@@ -347,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4536741357312660337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2400017, y: 0.23999989}
+  m_AnchoredPosition: {x: 2.43, y: 16.29}
   m_SizeDelta: {x: 7, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8003679045711251245
@@ -1146,8 +1146,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7638895889965025844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9, y: -13.1, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 2}
+  m_LocalPosition: {x: -2.9, y: -8.5, z: 0}
+  m_LocalScale: {x: 4, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3785519059631986913}
@@ -1194,8 +1194,8 @@ SpriteRenderer:
   m_SortingLayerID: 27596515
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ed70eceb7eb6d4c499c45ade4d8abb2d, type: 3}
-  m_Color: {r: 0.8679245, g: 0.33614206, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 198b2f713b2c1a24bbdf06b753dd58c9, type: 3}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1254,14 +1254,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 20.48}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.48, y: 20.48}
+  m_Size: {x: 19, y: 11}
   m_EdgeRadius: 0
 --- !u!198 &651334645250394429
 ParticleSystem:
@@ -1900,9 +1900,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: -1.8, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 7, y: 15, z: 1}
+    m_Scale: {x: 13, y: 15, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0

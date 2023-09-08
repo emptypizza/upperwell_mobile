@@ -1204,7 +1204,7 @@ MonoBehaviour:
   comboStack: 0
   missilePrefab: {fileID: 5912830025925147724, guid: 4e978e10b6382469e82c873b41930fed, type: 3}
   missileSpawnPoint: {fileID: 5194616090534318519}
-  missileForce: 22
+  missileForce: 19
   bCharInterpolationOn: 0
   rotationAmount: 10.3
   interpolationSpeed: 22.9
@@ -1240,7 +1240,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8277278965175376927}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

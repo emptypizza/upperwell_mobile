@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1871513796022416815
 MonoBehaviour:
@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 594557064797193263, guid: e5eb232828ba24bf082a130df33a5414, type: 3}
-  spawnRate: 2
-  gameWorldWidth: 20
-  gameWorldHeight: 10
+  spawnRate: 5.6
+  gameWorldWidth: 4.6
+  gameWorldHeight: -6

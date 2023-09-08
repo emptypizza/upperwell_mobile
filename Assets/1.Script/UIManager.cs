@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public ballrumble ballrumble_PC; // Modified to BallRumble
-    public Text pcHPText; // Modified to pcRotText
+    public Text nLevel; // Modified to pcRotText
     public Text gameCurrentScore;
     public Text gameBestScore;
     public Button shotButton; // Modified to shotButton
@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        pcHPText.text = ballrumble_PC.nHP.ToString();//pcRotText.text = ballrumble_PC.GetNHP().ToString();
+        nLevel.text = GameManager.nLevel.ToString();//pcRotText.text = ballrumble_PC.GetNHP().ToString();
 
         gameCurrentScore.text = GameManager.Instance.nGameScore_current.ToString(); // Used a method to get current score
         gameBestScore.text = GameManager.Instance.nGameScore_Best.ToString();

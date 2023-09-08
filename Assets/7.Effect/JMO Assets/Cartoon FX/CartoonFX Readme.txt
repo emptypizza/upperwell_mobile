@@ -1,7 +1,7 @@
-﻿Cartoon FX Pack, version 2.7
-2014/05/19
+﻿Cartoon FX Pack, version 2.63
+2013/12/06
 © 2013,2014 - Jean Moreno
-============================
+=============================
 
 
 PREFABS
@@ -68,99 +68,3 @@ Contact me at:
 jean.moreno.public+unity@gmail.com
 
 I'd be happy to see any effects used in your project, so feel free to drop me a line about that! :)
-
-
-RELEASE NOTES
--------------
-v2.7
-- updated CFX Editor
-- updated max particle count for each prefab to lower memory usage
-- removed all Lights for Mobile prefabs
-- improved some effects:
-	* removed world space simulation when unnecessary
-	* disabled sort mode when unnecessary
-	* removed velocity inherit when unnecessary
-- added CFX Spawn System template prefab
-- added a few effect variants
-
-v2.63
-- updated CFX Editor
-
-v2.62
-- Bug and compatibility fixes
-
-v2.61
-- Removed a duplicated Editor script that was misplaced (again)
-
-v2.6
-- updated CFX Editor
- (now in Window > CartoonFX Easy Editor, and more options)
-- added JMO Assets menu (Window -> JMO Assets), to check for updates or get support
-
-v2.51
-- Removed a duplicated Editor script that was misplaced
-
-v2.5
-- Added 4 new effects + variants:
-	* Explosions/CFX_Firework (multiple colors)
-	* Misc/CFX_Tornado (+ looped, big)
-	* Misc/CFX_Tornado_Straight (+ looped, big)
-	* Misc/CFX_GroundAura
-
-- Fixed other Unity 4.1 incompatibilities
-v2.41
-- Fixed other Unity 4.1 incompatibilities
-
-v2.4
-- Added 4 new effects:
-	* Electric/CFX_ElectricityBall_Alt
-	* Misc/CFX_SoftStar
-	* Misc/CFX_SpikyAura_Character
-	* Misc/CFX_SpikyAura_Sphere
-- Fixed Compilation error for CFX_SpawnSystem in Unity 4.1
-- Fixed Cartoon FX editor scaling, now supports "Size by Speed"
-
-v2.3
-- Fixed bugs from Unity 4.0 while retaining compatibility with 3.5
-
-v2.2
-- Fixed bugs from migration to Unity 4.0
-
-v2.1
-- Fix: Added mobile optimized version for Magic Poof effects
-
-v2.0
-- Added CFX_SpawnSystem to easily preload GameObjects and avoid Instantiating them after (very useful for mobile!)
-- You can now tint colors with CartoonFX Easy Editor (including gradients)
-- Added a script fixing a Shuriken bug where an emitter would emit before being translated to the desired position
-
-v1.8
-- Enabled MipMaps for Mobile textures (turns out it's better for perfs despite the negligible memory overhead)
-- Set compression to automatic (PVRTC doesn't work for Android)
-
-v1.7
-- New effects: Gas Leak (+2 variants) and Magic Poof (+1 variant)
-- Removed the demo scripts (random dir, etc.) from the prefabs
-
-v1.6
-- CartoonFX Easy Editor: Added second Color for Tint
-
-v1.5
-- Added "Force over Lifetime" to the scaling system
-
-v1.4
-- Added Cartoon FX Easy Editor:
-Change various properties easily from multiple Particle Systems at once: scale, change duration, tint color;
-and a unique feature to copy all properties from a Particle System's modules to any other Particle System(s)!
-- Improved electricity texture
-
-v1.3
-- Added Mobile-optimized versions of all the prefabs/materials/textures (see readme for specific changes)
-
-v1.2
-- Fixed sorting fudge for a lot of prefabs
-- Added CFX_Fountain
-
-v1.1
-- Fixed flames flickering
-- Added DoubleFlame

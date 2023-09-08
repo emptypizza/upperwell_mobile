@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
         audioSource.PlayOneShot(btnpress1);
 
 
-        SceneManager.LoadScene(GameManager.nLevel);
+        SceneManager.LoadScene(GameManager.nLevel+1);
         nSelect = 2;
 
 
@@ -100,6 +100,18 @@ public class MainMenu : MonoBehaviour
 
         nSelect = 5;
         Application.Quit();
+
+
+
+    }
+
+    public void tutorialbtn()
+    {
+
+        audioSource.PlayOneShot(btn);
+
+        nSelect = 6;
+      
 
 
 

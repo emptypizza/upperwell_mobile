@@ -22,7 +22,7 @@ public class ballrumble : MonoBehaviour
     public Animator animator;
     public GameObject Aim;
     public DynamicJoystick joystick;
-    public bool bJoysitck_contorl;
+   // public bool bJoysitck_contorl;
     public float fPCSpeed = 0.2f;
     public List<GameObject> list_ComboStack;
     public float fComboTime = 0;
@@ -154,43 +154,17 @@ public class ballrumble : MonoBehaviour
         transform.position += (Vector3)dir * fPCSpeed * Time.deltaTime;
         rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
         if (moveInput_keyboard != 0)
+        {
+            this.rb.velocity = Vector2.up*2;
             transform.Find("DIO").transform.Rotate(0, 0, -3 * moveInput_keyboard);
-
+        }
         // 조이스틱 입력 처리
         float horizontalInput = joystick.Horizontal;
-        if (horizontalInput != 0)
+        if (horizontalInput != 0) {
+            this.rb.velocity = Vector2.up*2;
             transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
-
-
-        /*
-        moveInput_keyboard = Input.GetAxisRaw("Horizontal");
-        Vector2 dir = new Vector2(moveInput_keyboard, 0);
-
-     
-
-        if (bJoysitck_contorl == false)
-        {
-            bJumpOK = true;
-            fDelayDuration = 0f;
-            transform.position += (Vector3)dir * fPCSpeed * Time.deltaTime;
-            rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-            if (horizontalInput != 0)
-                transform.Find("DIO").transform.Rotate(0, 0, -3 * horizontalInput);
         }
-        else if (bJoysitck_contorl == true)
-        {
-
-          
-            float horizontalInput = joystick.Horizontal;
-            if (horizontalInput != 0)
-                transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
             
-        }
-        */
-
-
-
 
         if (bJumpOK == false)
         {
@@ -261,7 +235,7 @@ public class ballrumble : MonoBehaviour
             
         }
 
-        if (bJoysitck_contorl == false)
+      //  if (bJoysitck_contorl == false)
         {
             transform.position += (Vector3)dir * fPCSpeed * Time.deltaTime;
             rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
@@ -269,7 +243,7 @@ public class ballrumble : MonoBehaviour
             if (horizontalInput != 0)
                 transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
         }
-        else
+        ///else
         {
             float horizontalInput = joystick.Horizontal;
             if (horizontalInput != 0)
