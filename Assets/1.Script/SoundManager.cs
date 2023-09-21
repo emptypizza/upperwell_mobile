@@ -45,7 +45,7 @@ public class SoundManager : Singleton<SoundManager>
     public AudioClip PlayerwalkSound;
     public AudioClip ShieldSound;
     public AudioClip startani;
-    public AudioClip[] BGMarray = new AudioClip[4];
+    public AudioClip[] BGMarray = new AudioClip[5];
 
     public AudioClip E1Atksnd;
     public AudioClip E1Deadsnd;
@@ -285,10 +285,14 @@ public class SoundManager : Singleton<SoundManager>
         AudioClip clipToPlay = null;
         switch (level)
         {
+            case 0: clipToPlay = BGMarray[5]; break;
             case 1: clipToPlay = BGMarray[0]; break;
             case 2: clipToPlay = BGMarray[1]; break;
             case 3: clipToPlay = BGMarray[2]; break;
             case 4: clipToPlay = BGMarray[3]; break;
+
+
+            default: clipToPlay = BGMarray[5]; break;
                 // ... (다른 레벨의 음악)
         }
 

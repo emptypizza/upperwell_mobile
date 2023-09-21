@@ -33,10 +33,10 @@ public class GameManager : MonoBehaviour
     public static int nLevel;
 
 
-    public float LeftLimit = -22;
-    public float RightLimit = 21;
-    public float TopLimit = 9.8f;
-    public float BottomLimit = -9.5f;
+    public float  LeftLimit = -8.9f;
+    public float      RightLimit = 9;
+    public float      TopLimit = 30f;
+    public float BottomLimit = -9f;
 
 
 
@@ -61,8 +61,19 @@ public class GameManager : MonoBehaviour
         nGameScore_Best = 0;
         fGametime = 0f;
         Time.timeScale = 1f;
+
+        GameObject boundary = GameObject.FindGameObjectWithTag("Boundary"); // Boundary 태그를 가진 오브젝트를 찾습니다.
+        if (boundary != null)
+          //  boundaryPosition = boundary.transform.position;  // Boundary의 위치를 저장합니다.
+        
+     LeftLimit = -8.9f;
+     RightLimit = 9;
+     TopLimit = 30f;
+     BottomLimit = -9f;
         if (GameManager.nLevel >= 1)
             SoundManager.Instance.PlayBackgroundMusic(nLevel);
+        else
+            SoundManager.Instance.PlayBackgroundMusic(0);
     }
 
     private void Start()

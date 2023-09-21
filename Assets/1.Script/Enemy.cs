@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum EnemyKind { foot, fly, foot_guided, fly_guided, foot_amored, BOSS0 }
+public enum EnemyKind { footman, wingman, foot_guided, fly_guided, foot_amored, BOSS0 }
 
 public class Enemy : MonoBehaviour
 {
@@ -9,44 +9,69 @@ public class Enemy : MonoBehaviour
     public EnemyKind enemykind;
     public float moveDistance = 4f;
     public float flyDistance = 2f;
-    public float moveSpeed = 2.0f;
+    public float fMoveSpeed = 2.0f;
     private Vector3 originPosition;
     public bool bMovingRight = true;
     public bool bMovingUp = true;
     public Rigidbody2D rb;
+private Vector3 boundaryPosition;  // Boundary의 위치를 저장할 변수
 
 
     public float fCheckdisfordic;
     void Start()
     {
+
+ 
         originPosition = transform.position;
         switch (enemykind)
         {
-            case EnemyKind.foot:
+            case EnemyKind.footman:
 
                 nHp = 1;
            
                 break;
-            case EnemyKind.fly:
+            case EnemyKind.wingman:
                 nHp = 1;
                 
                 break;
                 // Add other movement cases here based on other enemy kinds
         }
+
+          GameObject boundary = GameObject.FindGameObjectWithTag("Boundary"); // Boundary 태그를 가진 오브젝트를 찾습니다.
+    if (boundary != null)
+    {
+        boundaryPosition = boundary.transform.position;  // Boundary의 위치를 저장합니다.
+    }
+    else
+    {
+        Debug.Log("Boundary를 찾을 수 없습니다.");  // Boundary를 찾지 못했을 경우 오류 메시지를 출력합니다.    
+    }
     }
 
+void CheckBoundaryDistance()
+{
+    if (Mathf.Abs(transform.position.x - boundaryPosition.x) > 10f || 
+        Mathf.Abs(transform.position.y - boundaryPosition.y) > 40f)
+    {
+        Invoke("Dead", 3.14f); // Dead 함수를 4초 뒤에 호출합니다.
+    }
+}
 
 
     void Update()
     {
+
+         // Boundary와의 거리를 체크합니다.
+    CheckBoundaryDistance();
+
         switch (enemykind)
         {
-            case EnemyKind.foot:
+            case EnemyKind.footman:
                 // 움직임의 방향을 기반으로 목표 위치 결정
                 Vector3 targetPosition = bMovingRight ? originPosition + new Vector3(moveDistance, 0, 0) : originPosition - new Vector3(moveDistance, 0, 0);
 
                 // 목표 위치로 적 움직임
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, fMoveSpeed * Time.deltaTime);
                 fCheckdisfordic = Vector2.Distance(transform.position, targetPosition);
                 // 적이 목표 위치에 도달했는지 확인
                 if (fCheckdisfordic < 2.3f)
@@ -57,12 +82,15 @@ public class Enemy : MonoBehaviour
                 }
                 //MoveHorizontally();
                 break;
-            case EnemyKind.fly:
+            case EnemyKind.wingman:
 
                 FlyHorizontally();
                 break;
                 // Add other movement cases here based on other enemy kinds
         }
+       
+     
+     
     }
 
     void MoveHorizontally()
@@ -70,7 +98,7 @@ public class Enemy : MonoBehaviour
         float xDirection = bMovingRight ? 1 : -1;
         Vector3 targetPosition = originPosition + new Vector3(moveDistance * xDirection, 0, 0);
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, fMoveSpeed * Time.deltaTime);
         fCheckdisfordic = Vector2.Distance(transform.position, targetPosition);
 
         if (Mathf.Abs(transform.position.x - targetPosition.x) < 0.1f)
@@ -86,7 +114,7 @@ public class Enemy : MonoBehaviour
         float yDirection = bMovingUp ? 1 : -1;
         Vector3 targetPosition = originPosition + new Vector3(moveDistance * xDirection, flyDistance * yDirection, 0);
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, fMoveSpeed * Time.deltaTime);
         fCheckdisfordic = Vector2.Distance(transform.position, targetPosition);
 
         if (Mathf.Abs(transform.position.x - targetPosition.x) < 0.1f)
@@ -107,12 +135,18 @@ public class Enemy : MonoBehaviour
 
         switch (enemykind)
         {
-            case EnemyKind.foot:
+            case EnemyKind.footman:
                 SoundManager.Instance.E1Dead();
 
                 break;
-            case EnemyKind.fly:
+            case EnemyKind.wingman:
 
+                SoundManager.Instance.E1Dead();
+                break;
+
+
+            default:
+              SoundManager.Instance.E1Dead();
                 break;
          
         }
@@ -129,9 +163,9 @@ public class Enemy : MonoBehaviour
             Dead();
         }
     }
+
     public void OnCollisionExit2D(Collision2D collision)
-    {
-    }
+    {  }
 }
 
 /*public class Enemy : MonoBehaviour

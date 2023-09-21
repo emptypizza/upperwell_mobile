@@ -21,8 +21,7 @@ public class ballrumble : MonoBehaviour
     public TextMesh TextnHP;
     public Animator animator;
     public GameObject Aim;
-    public DynamicJoystick joystick;
-   // public bool bJoysitck_contorl;
+    public DynamicJoystick joystick;// public bool bJoysitck_contorl;
     public float fPCSpeed = 0.2f;
     public List<GameObject> list_ComboStack;
     public float fComboTime = 0;
@@ -55,7 +54,7 @@ public class ballrumble : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Dash_fDeltatime = 0;
-        nHP = 4;
+        nHP = 499;
     }
 
     void ResetGame()
@@ -152,16 +151,16 @@ public class ballrumble : MonoBehaviour
         moveInput_keyboard = Input.GetAxisRaw("Horizontal");
         Vector2 dir = new Vector2(moveInput_keyboard, 0);
         transform.position += (Vector3)dir * fPCSpeed * Time.deltaTime;
-        rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
+       // rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
         if (moveInput_keyboard != 0)
         {
-            this.rb.velocity = Vector2.up*2;
+            this.rb.velocity = Vector2.up*1.09f;
             transform.Find("DIO").transform.Rotate(0, 0, -3 * moveInput_keyboard);
         }
         // 조이스틱 입력 처리
         float horizontalInput = joystick.Horizontal;
         if (horizontalInput != 0) {
-            this.rb.velocity = Vector2.up*2;
+            this.rb.velocity = Vector2.up*1.09f;
             transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
         }
             
@@ -180,20 +179,7 @@ public class ballrumble : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) // (bJumpOK == true) &&
         {
-            /*
-            Vector2 dic_aim = Aim.transform.position - this.transform.position;
-            // dic_aim = -dic_aim;
-
-
-            GameObject missile = Instantiate(missilePrefab, missileSpawnPoint.position, Quaternion.identity);
-            Rigidbody2D missileRb = missile.GetComponent<Rigidbody2D>();    //  Vector2 shootDirection = transform.Find("DIO").up;
-            rb.AddForce(-dic_aim.normalized * fJumpPower, ForceMode2D.Impulse);
-            missileRb.AddForce(dic_aim.normalized * missileForce, ForceMode2D.Impulse);
-
-            Dash_fDeltatime = 0;
-            fFillTimer = 0f;
-            bJumpOK = false;
-            */
+   
             OnShot();
 
         }
@@ -289,6 +275,41 @@ public class ballrumble : MonoBehaviour
     }
 
 
+
+
+    [SerializeField] float BlueBoomValue = 3.99f;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Wall wall = collision.gameObject.GetComponent<Wall>();
+
+        if (collision.gameObject.tag == "Finish")
+        {
+            GameManager.Instance.GS = GameState.Clear;
+            SoundManager.Instance.Goalin();
+        }
+
+        if (collision.gameObject.tag == "wall_good")
+        {
+            Quaternion rotation = Quaternion.Euler(260, 0, 0);
+            GameObject blueBoom = Instantiate(Resources.Load("BlueBoom") as GameObject, collision.transform.position, rotation);
+
+            // 여기서는 이펙트가 자동으로 사라지지 않는다면 몇 초 후에 파괴하는 코드를 추가할 수 있습니다.
+            // 예: Destroy(blueBoom, 3.0f); // 3초 후에 파괴
+
+            // 현재 받고 있는 힘을 모두 없애기
+            rb.velocity = Vector2.zero;
+
+            // 새로운 힘 추가하기
+            rb.AddForce(Vector2.up * BlueBoomValue, ForceMode2D.Impulse);
+            //rb.AddRelativeForce(Vector2.up * 10f);
+            SoundManager.Instance.WarpUp();
+            wall.n_hp -= 1;
+        }
+    }
+
+
+    /*
     [SerializeField] float BlueBoomValue = 8.7f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -314,41 +335,11 @@ public class ballrumble : MonoBehaviour
             rb.AddForce(Vector2.up * BlueBoomValue, ForceMode2D.Impulse);
             SoundManager.Instance.WarpUp();
             wall.n_hp -= 1;
-
-            //rb.AddRelativeForce(Vector2.up * 10f);
      
-        }
-       
-
-
-        
+        } 
     }
+    */
 
-    private void HandleCollision(Collision2D collision)
-    {
-        Wall wall = collision.gameObject.GetComponent<Wall>();
-
-        if (wall != null)
-        {
-            if (collision.gameObject.CompareTag("wall_good"))
-            {
-                comboStack++;
-                comboGauge += decreaseRate * 3600f * comboStack;
-                comboGauge = Mathf.Clamp(comboGauge, 0f, 1f);
-                //  Debug.LogWarning("아wall_goodwall_goodwall_good ");
-                GameObject combo = Instantiate(Resources.Load("combo") as GameObject);
-
-                if (combo == null)
-                    Debug.LogError("이상하다다다다다다");
-
-
-                combo.transform.SetParent(this.transform, false);
-                list_ComboStack.Add(combo);
-
-               // wall.GetComponent<Animator>().SetTrigger("isHit");
-            }
-        }
-    }
 
     private void HandleTrigger(Collider2D collision)
     {
