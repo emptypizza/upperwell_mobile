@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 9190821012110934971}
   - component: {fileID: 6100170492666164889}
   - component: {fileID: 8423941120665696250}
-  - component: {fileID: 38673470077461825}
   m_Layer: 0
-  m_Name: footman
+  m_Name: Footman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9005364674782556151
 SpriteRenderer:
@@ -57,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,12 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nHp: 1
-  enemykind: 0
   moveDistance: 4
-  flyDistance: 2
   moveSpeed: 2
   bMovingRight: 1
-  bMovingUp: 1
   rb: {fileID: 8423941120665696250}
   fCheckdisfordic: 0
 --- !u!50 &8423941120665696250
@@ -193,33 +189,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &38673470077461825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594557064797193263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000e316a501a56517ab2d0711633fb78b73
-  m_ShapePath:
-  - {x: -0.45000005, y: -0.775, z: 0}
-  - {x: -0.45000005, y: 0.775, z: 0}
-  - {x: 0.4499998, y: 0.775, z: 0}
-  - {x: 0.4499998, y: -0.775, z: 0}
-  m_ShapePathHash: 0
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -398916
-  m_LocalBounds:
-    m_Center: {x: -0.00000011920929, y: 0, z: 0}
-    m_Extent: {x: 0.44999993, y: 0.775, z: 0}

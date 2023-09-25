@@ -45,7 +45,7 @@ public class SoundManager : Singleton<SoundManager>
     public AudioClip PlayerwalkSound;
     public AudioClip ShieldSound;
     public AudioClip startani;
-    public AudioClip[] BGMarray = new AudioClip[5];
+    public AudioClip[] BGMarray = new AudioClip[4];
 
     public AudioClip E1Atksnd;
     public AudioClip E1Deadsnd;
@@ -101,19 +101,6 @@ public class SoundManager : Singleton<SoundManager>
        
     }
 
-    /*  void Awake()
-    {
-      if (this == null)
-        {
-            this.Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    */
     void Start()
     {
        // if(GameManager.nLevel >= 0)
@@ -285,15 +272,14 @@ public class SoundManager : Singleton<SoundManager>
         AudioClip clipToPlay = null;
         switch (level)
         {
-            case 0: clipToPlay = BGMarray[5]; break;
             case 1: clipToPlay = BGMarray[0]; break;
             case 2: clipToPlay = BGMarray[1]; break;
             case 3: clipToPlay = BGMarray[2]; break;
             case 4: clipToPlay = BGMarray[3]; break;
+            // ... (다른 레벨의 음악)
 
+            default: clipToPlay = BGMarray[3]; break;
 
-            default: clipToPlay = BGMarray[5]; break;
-                // ... (다른 레벨의 음악)
         }
 
         if (clipToPlay != null)
@@ -303,35 +289,3 @@ public class SoundManager : Singleton<SoundManager>
         }
     }
 }
-
-
-
-/*
-
-public class SoundManager : MonoBehaviour
-{
-    public static SoundManager me;
-
-
-
-
-
-
-
-    // ... (기타 사운드 메서드)
-   public void Click()
-   {
-       speaker_A.clip = clickSound;
-       speaker_A.Play();
-
-
-   }
-   public void Getbullet()
-   {
-       speaker_B.clip = getBulletSound;
-       speaker_B.Play();
-   }
-
-
-}
- */

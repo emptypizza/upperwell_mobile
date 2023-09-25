@@ -48,7 +48,7 @@ public class BigPress : MonoBehaviour // : InitializeBase
 
             if (PressUpon)
             {
-               if (transform.position.y < 19.9f)
+               if (transform.position.y < 20.0f)
                  transform.Translate(Vector2.up * fSpeed * Time.deltaTime);
               
                 

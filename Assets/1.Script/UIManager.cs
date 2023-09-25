@@ -6,22 +6,29 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public ballrumble ballrumble_PC; // Modified to BallRumble
+    public EnemySpawner enemyspawner;
+
+
     public Text nLevel; // Modified to pcRotText
-    public Text fDifficulty_lv;
     public Text gameCurrentScore;
     public Text gameBestScore;
+    public Text fDifficulty_lv;
+
+
+
+
     public Button shotButton; // Modified to shotButton
     public Button clearButton;
     public Button gameoverButton;
     public Image clearImage; // Modified to clearImage
     public Image gameoverImage;
-
-    public EnemySpawner enemyspawner;
+ 
 
     void Start()
     {
        // GameManager.Instance.UIManager = this;
         ballrumble_PC = GameObject.FindObjectOfType<ballrumble>();
+
 
         if (null == enemyspawner)
         {
@@ -29,6 +36,7 @@ public class UIManager : MonoBehaviour
             if (enemyspawner == null)
                 Debug.LogError("enemyspawner가 신에 없.다다다...");
         }
+
 
         shotButton = transform.Find("Shot_Button").gameObject.GetComponent<Button>();
         clearButton = transform.Find("clearimg").gameObject.GetComponentInChildren<Button>();
@@ -49,12 +57,11 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        nLevel.text = GameManager.nLevel.ToString();//pcRotText.text = ballrumble_PC.GetNHP().ToString();
-        fDifficulty_lv.text = enemyspawner.fLeveling.ToString("F2");
+        nLevel.text = GameManager.nLevel.ToString();
+        fDifficulty_lv.text = enemyspawner.fLeveling.ToString("F2");//추가 코드
 
         gameCurrentScore.text = GameManager.Instance.nGameScore_current.ToString(); // Used a method to get current score
         gameBestScore.text = GameManager.Instance.nGameScore_Best.ToString();
-       // gameBestScore.text = GameManager.Instance.GetGameScoreBest().ToString(); // Used a method to get best score
 
       
         if(ballrumble_PC.bJumpOK)    // if (ballrumble_PC.IsJumpOK()) 
