@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundaries1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1793492629371070188, guid: 38481f15ced2e4864b43675708714933, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3785519059631986913, guid: 38481f15ced2e4864b43675708714933, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -339,10 +343,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2848807255970198354, guid: 38481f15ced2e4864b43675708714933, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38481f15ced2e4864b43675708714933, type: 3}
 --- !u!1001 &481425669
 PrefabInstance:
@@ -558,6 +559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2755063466438259296, guid: e82bae3f2813b4bf685a9493bc186535, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1612351081}
     - target: {fileID: 2969604566107513719, guid: e82bae3f2813b4bf685a9493bc186535, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2032,6 +2037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundaries1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1793492629371070188, guid: 38481f15ced2e4864b43675708714933, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3785519059631986913, guid: 38481f15ced2e4864b43675708714933, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -2079,10 +2088,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2848807255970198354, guid: 38481f15ced2e4864b43675708714933, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38481f15ced2e4864b43675708714933, type: 3}
 --- !u!1001 &1678432991
 PrefabInstance:

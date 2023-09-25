@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8056415236020534037}
   - component: {fileID: 1525513461353552571}
   - component: {fileID: 200729181704431039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wingman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -160,8 +160,8 @@ MonoBehaviour:
   enemykind: 1
   moveDistance: 4
   flyDistance: 2
-  moveSpeed: 3
-  bMovingRight: 1
+  fMoveSpeed: 2
+  bMovingRight: 0
   bMovingUp: 1
   rb: {fileID: 200729181704431039}
   fCheckdisfordic: 0

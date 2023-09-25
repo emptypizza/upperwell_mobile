@@ -1191,7 +1191,6 @@ MonoBehaviour:
   animator: {fileID: 971792881514762168}
   Aim: {fileID: 230022045245591807}
   joystick: {fileID: 0}
-  bJoysitck_contorl: 1
   fPCSpeed: 0.2
   list_ComboStack:
   - {fileID: 707085927192673058}
@@ -1209,7 +1208,7 @@ MonoBehaviour:
   rotationAmount: 10.3
   interpolationSpeed: 22.9
   bIsDead: 0
-  BlueBoomValue: 8.7
+  BlueBoomValue: 27.7
 --- !u!95 &971792881514762168
 Animator:
   serializedVersion: 5

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -17,8 +18,6 @@ public class EnemySpawner : MonoBehaviour
     public float gameWorldWidth = 20f;   // Width of the game world.
     public float gameWorldHeight = 10f;  // Height of the game world.
     [SerializeField] ballrumble player;
-
-
 
     public float fLeveling = 0;
     public void Start()
@@ -53,62 +52,48 @@ public class EnemySpawner : MonoBehaviour
     public float Spawn_VerticalTop = 16.5f; //Spawn_15VerticalTop
 
 
+    Vector2[] spawnPoints0 = new Vector2[4];
+    Vector2[] spawnPoints1;
+
     public void Update()
     {
         fGametime = Time.time;
 
         if (fGametime >= nextSpawnTime)
         {
+            spawnPoints0 = new Vector2[4];
 
-            Vector2[] spawnPoints0 = {
+            spawnPoints0[0] = new Vector2(Spawn_HorizontalLeft, Random.Range(Spawn_VerticalBottom, Spawn_VerticalTop) + this.transform.position.y);
+            spawnPoints0[1] = new Vector2(Spawn_HorizontalRight, Random.Range(Spawn_VerticalBottom, Spawn_VerticalTop) + this.transform.position.y);
+            spawnPoints0[2] = new Vector2(Random.Range(Spawn_HorizontalLeft, Spawn_HorizontalRight) + this.transform.position.x, Spawn_VerticalTop);
+            spawnPoints0[3] = new Vector2(Random.Range(Spawn_HorizontalLeft, Spawn_HorizontalRight) + this.transform.position.x, Spawn_VerticalBottom);
 
-
-
-            new Vector2(Spawn_HorizontalLeft, Random.Range(Spawn_VerticalBottom, Spawn_VerticalTop) + this.transform.position.y),
-            new Vector2(Spawn_HorizontalRight, Random.Range(Spawn_VerticalBottom, Spawn_VerticalTop) + this.transform.position.y),
-            new Vector2(Random.Range(Spawn_HorizontalLeft, Spawn_HorizontalRight)  + this.transform.position.x,
-
-            Spawn_VerticalTop),
-            new Vector2(Random.Range(Spawn_HorizontalLeft, Spawn_HorizontalRight)+ this.transform.position.x, Spawn_VerticalBottom)
+            Vector2 lv1spawnPosition = spawnPoints0[Random.Range(0, spawnPoints0.Length)];
 
 
-        };
-            Vector2[] spawnPoints1 =
-                {
+            // ... 기존의 코드 ...
 
-
-                };
-
-            fLeveling = fGametime / 5;//시간이 지날 수록 난이도를 상승시킨.
-            Vector2 lv1spawnPosition = spawnPoints0[Random.Range(0, spawnPoints0.Length)]; //footman 중구난방하게 나오는 풋맨 스폰 위칟
-            Vector2 lv2spawnPosition;// = spawnPoints1[Random.Range(0, spawnPoints1.Length)]; //wingman 은 좌우하 끝쪽에서 스폰시, pc의 position.y+1~3를 기억하여 spawn
-
-
-            if (fLeveling <= 1) // 10으로 나눠서 1이하 인 경우, 풋맨 
-            
+            if (fGametime < 10f) // 처음 10초 동안
+            {
+                // footman 생성
                 Instantiate(enemyPrefabs[0], lv1spawnPosition, Quaternion.identity);
+            }
+            else if(fGametime > 10f && fGametime < 40.0f) // 10초가 지난 후와 40초 사이에  
+            {
+                // wingman을 Boundary의 맨 아래 좌우에서 생성
+                float boundaryBottomY = Spawn_VerticalBottom; // "Boundary"의 맨 아래 y 좌표를 적절히 설정해야 합니다.
+                float playerY = player.transform.position.y; // ballrumble의 현재 y 좌표
+                Vector2 wingmanSpawnPosition = new Vector2(
+                    Random.value > 0.5f ? Spawn_HorizontalLeft : Random.Range(Spawn_HorizontalLeft, Spawn_HorizontalRight),
+                    Mathf.Min(boundaryBottomY, playerY + Random.Range(1.9f, 5.1f))
+                );
+                Instantiate(enemyPrefabs[1], wingmanSpawnPosition, Quaternion.identity); // enemyPrefabs[1]이 wingman이라고 가정합니다.
+            }
+            else
+            { }
 
-            
-
-            nextSpawnTime = fGametime + 1f / spawnRate; //SpawnEnemy();
-
-
+            nextSpawnTime = fGametime + 1f / spawnRate;
         }
-
     }
-
-    /*
-    void SpawnEnemy()
-    {
-        Vector2[] spawnPoints = {
-            new Vector2(-20, Random.Range(-25, 25)),
-            new Vector2(20, Random.Range(-25, 25)),
-            new Vector2(Random.Range(-15, 15), 25),
-            new Vector2(Random.Range(-15, 15), -25)
-        };
-
-        Vector2 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemyPrefabs[0], spawnPosition, Quaternion.identity);
-    }
-    */
+   
 }

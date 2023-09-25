@@ -154,13 +154,13 @@ public class ballrumble : MonoBehaviour
         rb.AddTorque(-moveInput_keyboard * fPCSpeed, ForceMode2D.Force);
         if (moveInput_keyboard != 0)
         {
-            this.rb.velocity = Vector2.up*1.01f;
+            this.rb.velocity = Vector2.up*0.9f;
             transform.Find("DIO").transform.Rotate(0, 0, -3 * moveInput_keyboard);
         }
         // 조이스틱 입력 처리
         float horizontalInput = joystick.Horizontal;
         if (horizontalInput != 0) {
-            this.rb.velocity = Vector2.up* 1.01f;
+            this.rb.velocity = Vector2.up* 0.9f;
             transform.Find("DIO").transform.Rotate(0, 0, rotationAmount * horizontalInput);
         }
             
@@ -236,6 +236,7 @@ public class ballrumble : MonoBehaviour
         }
     }
 
+  
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //HandleCollision(collision);
@@ -250,8 +251,8 @@ public class ballrumble : MonoBehaviour
                 GameManager.Instance.AddScore();
 
                 // anim.SetTrigger("ani_dash");
-
-                rb.AddRelativeForce(Vector2.up * 10f);
+                rb.velocity = Vector2.zero;
+                rb.AddRelativeForce(Vector2.up * BlueBoomValue);
             }
 
             if (collision.gameObject.CompareTag("wall_no"))
@@ -275,7 +276,7 @@ public class ballrumble : MonoBehaviour
     }
 
 
-    [SerializeField] float BlueBoomValue = 4.7f;
+    [SerializeField] float BlueBoomValue = 27.7f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Wall wall = collision.gameObject.GetComponent<Wall>();
@@ -292,7 +293,9 @@ public class ballrumble : MonoBehaviour
             GameObject blueBoom = Instantiate(Resources.Load("BlueBoom") as GameObject, collision.transform.position, rotation);  // "BlueBoom" 이펙트 프리팹을 Instantiate합니다.
 
             // 여기서는 이펙트가 자동으로 사라지지 않는다면 몇 초 후에 파괴하는 코드를 추가할 수 있습니다.
-            // 예: Destroy(blueBoom, 3.0f); // 3초 후에 파괴
+
+            if(blueBoom != null)
+            Destroy(blueBoom, 3.0f); // 3초 후에 파괴
 
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * BlueBoomValue, ForceMode2D.Impulse);//Add new Force Impulse rb.AddRelativeForce(Vector2.up * 10f);

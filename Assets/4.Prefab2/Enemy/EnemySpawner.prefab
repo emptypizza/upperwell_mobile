@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1871513796022416815
 MonoBehaviour:
@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   group_type: 0
   group_type_next: 0
-  mobgroup: {fileID: 0}
+  mobgroup: {fileID: 564946812418229411, guid: 3d051507e788c483bb6f565ec45759fc, type: 3}
   enemyPrefabs:
   - {fileID: 6100170492666164889, guid: e5eb232828ba24bf082a130df33a5414, type: 3}
   - {fileID: 1525513461353552571, guid: b9e86fdaec1b748bca5b261e6656725e, type: 3}
   - {fileID: 1525513461353552571, guid: b9e86fdaec1b748bca5b261e6656725e, type: 3}
-  spawnRate: 0.9
+  spawnRate: 1
   nextSpawnTime: 0
   gameWorldWidth: 4.6
   gameWorldHeight: -6
