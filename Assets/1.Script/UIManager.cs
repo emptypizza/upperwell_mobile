@@ -22,11 +22,28 @@ public class UIManager : MonoBehaviour
     public Button gameoverButton;
     public Image clearImage; // Modified to clearImage
     public Image gameoverImage;
- 
+
+    public void HideText()
+    {
+       // textObject.SetActive(false);
+        nLevel.gameObject.SetActive(false); // Modified
+        gameCurrentScore.gameObject.SetActive(false); // Modified
+        gameBestScore.gameObject.SetActive(false); // Modified
+        fDifficulty_lv.gameObject.SetActive(false); // Modified
+    }
+
+    public void ShowText()
+    {
+        nLevel.gameObject.SetActive(true); // true
+        gameCurrentScore.gameObject.SetActive(true); // true
+        gameBestScore.gameObject.SetActive(true); // true
+        fDifficulty_lv.gameObject.SetActive(true); // true
+    }
+
 
     void Start()
     {
-       // GameManager.Instance.UIManager = this;
+     
         ballrumble_PC = GameObject.FindObjectOfType<ballrumble>();
 
 

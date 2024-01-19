@@ -55,6 +55,8 @@ public class ballrumble : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Dash_fDeltatime = 0;
         nHP = 499;
+
+        enabled = true;
     }
 
     void ResetGame()
@@ -83,7 +85,6 @@ public class ballrumble : MonoBehaviour
     {
         if (bJumpOK)
         {
-
             SoundManager.Instance.Fire();
             Vector2 dic_aim = Aim.transform.position - this.transform.position;
            // dic_aim = -dic_aim;
@@ -95,13 +96,20 @@ public class ballrumble : MonoBehaviour
             rb.AddForce(-dic_aim.normalized * fJumpPower, ForceMode2D.Impulse);
             missileRb.AddForce(dic_aim.normalized * missileForce, ForceMode2D.Impulse);
 
+
+            // 위로 3만큼 이동
+            transform.Translate(new Vector3(0, 15f*Time.deltaTime, 0));
+
             Dash_fDeltatime = 0;
             fFillTimer = 0f;
             bJumpOK = false;
         }
     }
 
-
+    public void RotatePlayer(float angle)
+    {
+        transform.Rotate(0f, 0f, angle); // Rotate the player on the z axis
+    }
 
     public void Rotationinterpolation()
     {
@@ -291,7 +299,7 @@ public class ballrumble : MonoBehaviour
         {
             Quaternion rotation = Quaternion.Euler(260, 0, 0);
             GameObject blueBoom = Instantiate(Resources.Load("BlueBoom") as GameObject, collision.transform.position, rotation);  // "BlueBoom" 이펙트 프리팹을 Instantiate합니다.
-
+            
             // 여기서는 이펙트가 자동으로 사라지지 않는다면 몇 초 후에 파괴하는 코드를 추가할 수 있습니다.
 
             if(blueBoom != null)
