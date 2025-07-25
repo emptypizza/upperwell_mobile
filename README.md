@@ -1,4 +1,4 @@
-
+https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/
 GM 초밥어부의 패악질로 개발 드롭
 ----------------------- February 1st 2024(Friday) Devlog---------------------
 
