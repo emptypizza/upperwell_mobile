@@ -1,3 +1,5 @@
+
+GM 초밥어부의 패악질로 개발 드롭
 ----------------------- February 1st 2024(Friday) Devlog---------------------
 
 https://silky-number-76b.notion.site/footmadegames-footmadegames-Terms-of-Use-8ce445930ec44d058f838bf27388e9e4
